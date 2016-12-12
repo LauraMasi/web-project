@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script> 
+		<script src="jquery-ui-1.12.1/jquery-ui.min.js"></script> 
+		<script type="text/javascript">
+			$(function () {
+				$("#main,#second").sortable({
+							connectWith: "#main,#second",
+							start: function (event, ui) {
+									ui.item.toggleClass();
+									console.log("click");
+							},
+							stop: function (event, ui) {
+									ui.item.toggleClass();
+									console.log("release");
+							}
+					});
+					$("#main,#second").disableSelection();
+			});
+		</script>
+	</head>
+	<body>
+		<div class="col-md-5">
+			<div class="col-md-11 b">
+				<h3><strong>Main page</strong></h3>
+			</div>
+			<div id="main" class="container1 col-md-11"></div>
+		</div>
+		<div class="col-md-5">
+			<div class="col-md-11 b">
+				<h3><strong>Blocks</strong></h3>
+			</div>
+			<div id="second" class="container2 col-md-11">
+				<img id="d" class="image" src="images/1.jpg">
+				<img id="d1" class="image" src="images/2.jpg">
+				<img id="d2" class="image" src="images/3.jpg">
+				<img id="d3" class="image" src="images/4.jpg">
+				<img id="d4" class="image" src="images/5.jpg">
+				<img id="d5" class="image" src="images/6.jpg">
+			</div>
+			
+		</div>
+	</body>
+</html>
